@@ -75,6 +75,13 @@
 Aspiring Cybersecurity Specialist 🔐
 
 ---
+## 🌐 Live Demo
+
+✨ Experience the project live:
+
+🔗 https://silent-confessions.netlify.app  
+
+> Fully responsive & smooth UI 🔥
 
 ## ⚡ Note
 
