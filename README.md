@@ -79,7 +79,7 @@
 
 ## 👨‍💻 Developer
 
-**Shorya Gopyal**
+**Shorya Goyal**
 🎓 Class 11 (PCM + CS)
 🔐 Future Cybersecurity Specialist
 
