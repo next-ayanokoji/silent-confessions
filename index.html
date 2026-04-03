@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Confessions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>💬 School Confessions</h1>
+  <nav>
+    <button data-page="home">Home</button>
+    <button data-page="confess">Confess</button>
+    <button data-page="admin">Admin</button>
+  </nav>
+</header>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+  <h2>Anonymous Confession Wall</h2>
+  <p>Share your thoughts secretly 😈. Tumhare school ki stories, crushes, ya koi bhi secret yahan share karo. Nobody will know who you are.</p>
+  <p>Developer: wo to merko khud nahi pta</p>
+  <p>School: Baluni Shastripuram School (gonna be fun right?)</p>
+  <p>Instructions: Be respectful to developer. Avoid offensive language. Sab anonymous rahega!</p>
+
+  <h3 class="hall-title">Hall of Confessions</h3>
+  <div id="hallOfConfessions"></div>
+</div>
+
+<!-- CONFESS PAGE -->
+<div id="confess" class="page">
+  <div class="confess-container">
+    <h2 class="confess-heading">✧ Anonymous Confession ✧</h2>
+    <p class="confess-desc">Kuch baatein dil me reh jaati hain... yaha likh do. Koi nahi jaane ga tum kaun ho.</p>
+    <textarea id="confessionText" placeholder="Type your confession here..." required></textarea>
+    <button id="btnSubmit" class="send-btn">Send Confession ✦</button>
+    <p id="successMsg" class="successMsg"></p>
+  </div>
+</div>
+
+<!-- ADMIN PAGE -->
+<div id="admin" class="page">
+  <h2>Admin Login</h2>
+  <input id="adminUser" placeholder="ID">
+  <input id="adminPass" type="password" placeholder="Password">
+  <button id="btnAdminLogin">Login</button>
+
+  <div id="panel">
+    <h3>Confessions</h3>
+    <div id="confessionList"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

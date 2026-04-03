@@ -1,0 +1,208 @@
+/* GLOBAL STYLING */
+body {
+  background: linear-gradient(135deg, #0f172a, #1a2332);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  background: #020617;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #e0e0ff;
+  text-shadow: 0 0 15px #7c3aed;
+}
+
+/* NAV BUTTONS */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+nav button {
+  background: #7c3aed;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+nav button:hover {
+  background: #9333ea;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #9333ea;
+}
+
+/* PAGES */
+.page {
+  display: none;
+  padding: 50px 20px;
+}
+.active { display: block; animation: fadeIn 0.5s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* HOME PAGE */
+#home h2 { font-size: 2.2em; color: #e0e0ff; text-shadow: 0 0 15px #7c3aed; margin-bottom: 10px; }
+#home p { font-size: 1.2em; color: #cbd5e1; margin-bottom: 15px; }
+
+/* HALL OF CONFESSIONS */
+.hall-title { font-size: 1.8em; color: #e0e0ff; margin-top: 30px; text-shadow: 0 0 10px #7c3aed; }
+#hallOfConfessions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+#hallOfConfessions::-webkit-scrollbar { width: 8px; }
+#hallOfConfessions::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 4px; }
+
+/* Confession Cards Neon + Pulse */
+#hallOfConfessions .card {
+  width: 90%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg,#1e293b,#0f172a);
+  color: #e0e0ff;
+  font-size: 1.1em;
+  text-align: left;
+  box-shadow: 0 0 15px #7c3aed, 0 0 30px #9333ea;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 1.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide 0.5s forwards, neonPulse 2s infinite alternate;
+}
+#hallOfConfessions .card:hover {
+  transform: translateY(-5px) rotateZ(-1deg);
+  box-shadow: 0 0 25px #9333ea, 0 0 50px #7c3aed;
+  color: #ffffff;
+}
+@keyframes fadeSlide { to { opacity:1; transform: translateY(0); } }
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 15px #7c3aed, 0 0 30px #9333ea; color: #e0e0ff; }
+  50% { box-shadow: 0 0 20px #9333ea, 0 0 40px #7c3aed; color: #f0e0ff; }
+  100% { box-shadow: 0 0 15px #7c3aed, 0 0 30px #9333ea; color: #e0e0ff; }
+}
+
+/* CONFESS PAGE */
+.confess-container {
+  max-width: 500px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: #1e293b;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+textarea {
+  width: 90%;
+  max-width: 500px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  font-size: 1em;
+  resize: none;
+  height: 140px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+textarea:focus { outline:none; box-shadow:0 0 12px #7c3aed; }
+.send-btn {
+  background: #7c3aed;
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.send-btn:hover {
+  background:#9333ea;
+  transform:scale(1.05);
+  box-shadow:0 0 20px #9333ea;
+}
+.successMsg { color:#34d399; font-weight:bold; margin-top:10px; }
+
+/* ADMIN PANEL */
+#panel {
+  display: none;
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(145deg,#0f172a,#1e293b);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(124,58,237,0.6);
+  width: 95%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#panel h3 { font-size:2em; color:#e0e0ff; text-shadow:0 0 15px #7c3aed; margin-bottom:20px; text-align:center; }
+
+#confessionList .card {
+  background: linear-gradient(145deg,#1e293b,#0f172a);
+  padding:18px 22px;
+  margin:12px auto;
+  border-radius:12px;
+  box-shadow:0 4px 20px rgba(124,58,237,0.5);
+  font-size:1.1em;
+  color:#e0e0ff;
+  position:relative;
+  transition:0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+#confessionList .card:hover { transform:translateY(-3px); box-shadow:0 0 25px #7c3aed; }
+#confessionList .card button {
+  position:absolute; top:6px; right:6px; padding:5px 10px; font-size:0.85em; cursor:pointer;
+  background:#f87171; color:white; border:none; border-radius:8px; transition:0.2s ease, transform 0.2s ease;
+}
+#confessionList .card button:hover { background:#ef4444; transform:scale(1.1); }
+
+#adminUser, #adminPass {
+  padding:10px 15px; margin:10px 5px;
+  border-radius:10px; border:none;
+  background:#0f172a; color:white; font-size:1em;
+  box-shadow: inset 0 0 10px rgba(124,58,237,0.4);
+  transition:0.3s ease;
+}
+#adminUser:focus, #adminPass:focus { outline:none; box-shadow:0 0 12px #7c3aed; }
+#btnAdminLogin { background:#7c3aed; border:none; padding:10px 25px; color:white; font-weight:bold; border-radius:12px; cursor:pointer; transition:0.3s; }
+#btnAdminLogin:hover { background:#9333ea; transform:scale(1.05); box-shadow:0 0 20px #9333ea; }
+
+/* Scrollable admin list */
+#confessionList { max-height:400px; overflow-y:auto; padding-right:10px; scroll-behavior: smooth; }
+
+/* RESPONSIVE */
+@media screen and (max-width: 500px) {
+  textarea, input, button[type="submit"], .send-btn, nav button {
+    width: 90%;
+  }
+  #hallOfConfessions .card, #confessionList .card {
+    width: 90%;
+  }
+}
